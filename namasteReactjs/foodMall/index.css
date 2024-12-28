@@ -1,0 +1,13 @@
+.header{
+  display: flex;
+  height: 20px;
+}
+
+.header-logo-container{
+  height: 20px;
+}
+
+.logo{
+  width: 20px;
+  height: 20px;
+}
