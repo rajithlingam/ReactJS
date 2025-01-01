@@ -1,4 +1,9 @@
+.app{
+  cursor: pointer;
+}
+
 .header {
+  cursor:default;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +15,7 @@
   position: sticky;
   background-color: white;
 }
-.header:hover{
+.header:hover {
   background-color: brown;
 }
 
@@ -26,7 +31,7 @@
 
 .nav-item ul {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding: 0px 30px;
   margin: 0px;
 }
@@ -48,11 +53,27 @@
 }
 
 .res-card {
-  flex-wrap:wrap;
+  cursor:default;
   width: 200px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 6px;
   top: 160px;
   position: sticky;
   background-color: white;
 
+  border-radius: 7%;
+}
+
+.res-card:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: brown;
+  color: burlywood;
+}
+
+.res-logo {
+  width: 100%;
+  border-radius: 7%;
+}
+
+.res-detail{
+  cursor: pointer;
 }

@@ -3045,7 +3045,18 @@ const Header = () => {
 const RestaurantCard = () => {
   return (
     <div className="res-card">
-      <p>Delicious food at affordable prices</p>
+      <div>
+        <img
+          className="res-logo"
+          src="https://tse2.mm.bing.net/th?id=OIG4.n2dyP_ydktvxnkqr1adX&pid=ImgGn"
+          alt="restaurant-logo"
+        />
+      </div>
+
+      <h3 className="res-detail">FoodMaLL</h3>
+      <h4 className="res-detail">pureveg food</h4>
+      <h5 className="res-detail">Rating 4.4✨</h5>
+      
     </div>
   );
 };
@@ -3054,32 +3065,6 @@ const Body = () => {
   return (
     <div className="body">
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
         <RestaurantCard />
       </div>
     </div>
