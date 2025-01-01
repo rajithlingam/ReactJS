@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 const objlist = [
   {
     info: {
-      id: "236654",
+      id: "2366540",
       name: "Burger King",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/8/9ae32469-5258-445e-89dc-7c2a7fe456c3_236654.jpg",
@@ -82,7 +82,7 @@ const objlist = [
   },
   {
     info: {
-      id: "319331",
+      id: "3193311",
       name: "New saravanas parotta - NSP",
       cloudinaryImageId: "hopbsykpcqe3xgwp3xjr",
       locality: "Udayappa Colony",
@@ -159,7 +159,7 @@ const objlist = [
   },
   {
     info: {
-      id: "521493",
+      id: "5214932",
       name: "Rasikas Restaurant",
       cloudinaryImageId: "khjdlevgxkmrge15mrwa",
       locality: "Omalur Main Road",
@@ -236,7 +236,7 @@ const objlist = [
   },
   {
     info: {
-      id: "99313",
+      id: "993133",
       name: "Ambur Star Biriyani",
       cloudinaryImageId: "a8e7ce3136780a9d0e7abba21276efb9",
       locality: "Omalur Main Road",
@@ -313,7 +313,7 @@ const objlist = [
   },
   {
     info: {
-      id: "760443",
+      id: "7604434",
       name: "Olio - The Wood Fired Pizzeria",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/29/30f0dff0-6941-461f-a880-96f648e786a8_760443.jpg",
@@ -391,207 +391,7 @@ const objlist = [
   },
   {
     info: {
-      id: "539116",
-      name: "Nikaa Biryani",
-      cloudinaryImageId: "44b3576b9784c61572f090fe9f91aa51",
-      areaName: "Salem Bus stand",
-      costForTwo: "₹350 for two",
-      cuisines: ["Biryani", "Indian", "Chinese"],
-      avgRating: 4.3,
-      parentId: "370360",
-      avgRatingString: "4.3",
-      totalRatingsString: "926",
-      sla: {
-        deliveryTime: 16,
-        lastMileTravel: 1.8,
-        serviceability: "SERVICEABLE",
-        slaString: "15-20 mins",
-        lastMileTravelString: "1.8 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: { nextCloseTime: "2024-12-23 23:59:00", opened: true },
-      badges: {
-        imageBadges: [
-          {
-            imageId: "bolt/Bolt%20Listing%20badge@3x.png",
-            description: "bolt!",
-          },
-          {
-            imageId: "Rxawards/_CATEGORY-Biryani.png",
-            description: "Delivery!",
-          },
-        ],
-      },
-      isOpen: true,
-      aggregatedDiscountInfoV2: {},
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {
-            badgeObject: [
-              {
-                attributes: {
-                  description: "bolt!",
-                  imageId: "bolt/Bolt%20Listing%20badge@3x.png",
-                },
-              },
-              {
-                attributes: {
-                  description: "Delivery!",
-                  imageId: "Rxawards/_CATEGORY-Biryani.png",
-                },
-              },
-            ],
-          },
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: { aggregatedRating: { rating: "--" } },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: { context: "seo-data-d0796d44-f50b-44d7-9a10-c0d55efcde08" },
-    cta: {
-      link: "https://www.swiggy.com/city/salem/nikaa-biryani-salem-bus-stand-rest539116",
-      text: "RESTAURANT_MENU",
-      type: "WEBLINK",
-    },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
-  },
-  {
-    info: {
-      id: "768701",
-      name: "Aadhi Fast Food",
-      cloudinaryImageId: "b33020eb6608b35bc925b8cf8614b418",
-      locality: "Salai Road",
-      areaName: "Saradha college road",
-      costForTwo: "₹200 for two",
-      cuisines: ["Chinese", "Biryani"],
-      avgRating: 4.2,
-      parentId: "458833",
-      avgRatingString: "4.2",
-      totalRatingsString: "506",
-      sla: {
-        deliveryTime: 27,
-        lastMileTravel: 2.9,
-        serviceability: "SERVICEABLE",
-        slaString: "25-30 mins",
-        lastMileTravelString: "2.9 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: { nextCloseTime: "2024-12-23 23:59:00", opened: true },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: { imageBased: {}, textBased: {}, textExtendedBadges: {} },
-      },
-      aggregatedDiscountInfoV3: { header: "ITEMS", subHeader: "AT ₹99" },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: { aggregatedRating: { rating: "--" } },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: { context: "seo-data-d0796d44-f50b-44d7-9a10-c0d55efcde08" },
-    cta: {
-      link: "https://www.swiggy.com/city/salem/aadhi-fast-food-salai-road-saradha-college-road-rest768701",
-      text: "RESTAURANT_MENU",
-      type: "WEBLINK",
-    },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
-  },
-  {
-    info: {
-      id: "389834",
-      name: "Renuka Mess",
-      cloudinaryImageId: "wx7kwv14bpcrqndzrsny",
-      locality: "Lrn Colony",
-      areaName: "Salem Bus stand",
-      costForTwo: "₹200 for two",
-      cuisines: ["Chinese", "South Indian"],
-      avgRating: 4.3,
-      parentId: "168936",
-      avgRatingString: "4.3",
-      totalRatingsString: "5.1K+",
-      sla: {
-        deliveryTime: 17,
-        lastMileTravel: 2.9,
-        serviceability: "SERVICEABLE",
-        slaString: "15-20 mins",
-        lastMileTravelString: "2.9 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: { nextCloseTime: "2024-12-24 03:00:00", opened: true },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: { imageBased: {}, textBased: {}, textExtendedBadges: {} },
-      },
-      aggregatedDiscountInfoV3: { header: "20% OFF", subHeader: "UPTO ₹50" },
-      orderabilityCommunication: {
-        title: {},
-        subTitle: {},
-        message: {},
-        customIcon: {},
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-      externalRatings: { aggregatedRating: { rating: "--" } },
-      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-    },
-    analytics: { context: "seo-data-d0796d44-f50b-44d7-9a10-c0d55efcde08" },
-    cta: {
-      link: "https://www.swiggy.com/city/salem/renuka-mess-lrn-colony-salem-bus-stand-rest389834",
-      text: "RESTAURANT_MENU",
-      type: "WEBLINK",
-    },
-    widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
-  },
-  {
-    info: {
-      id: "539116",
+      id: "5391165",
       name: "Nikaa Biryani",
       cloudinaryImageId: "44b3576b9784c61572f090fe9f91aa51",
       areaName: "Salem Bus stand",
@@ -686,7 +486,7 @@ const objlist = [
   },
   {
     info: {
-      id: "768701",
+      id: "7687016",
       name: "Aadhi Fast Food",
       cloudinaryImageId: "b33020eb6608b35bc925b8cf8614b418",
       locality: "Salai Road",
@@ -759,7 +559,7 @@ const objlist = [
   },
   {
     info: {
-      id: "389834",
+      id: "3898347",
       name: "Renuka Mess",
       cloudinaryImageId: "wx7kwv14bpcrqndzrsny",
       locality: "Lrn Colony",
@@ -832,7 +632,7 @@ const objlist = [
   },
   {
     info: {
-      id: "573462",
+      id: "5734628",
       name: "Ocean Spice",
       cloudinaryImageId: "4422454f952a391aa8237622b217442a",
       locality: "Sastha Nagar",
@@ -906,7 +706,7 @@ const objlist = [
   },
   {
     info: {
-      id: "780778",
+      id: "7807789",
       name: "A2B - Adyar Ananda Bhavan",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/4/1f3ca440-ceac-451d-b137-5e92159c9021_780778.jpg",
@@ -982,7 +782,7 @@ const objlist = [
   },
   {
     info: {
-      id: "96819",
+      id: "9681910",
       name: "KFC",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/6259e828-6cfe-46f4-a1cc-b1bb055243f1_96819.JPG",
@@ -1082,7 +882,7 @@ const objlist = [
   },
   {
     info: {
-      id: "629405",
+      id: "62940511",
       name: "Dum Safar Biryani",
       cloudinaryImageId: "47eee43e59a6d49b0f6d9a2b0e523f47",
       locality: "Saradha College Main Road",
@@ -1155,7 +955,7 @@ const objlist = [
   },
   {
     info: {
-      id: "697790",
+      id: "69779012",
       name: "WarmOven Cake & Desserts",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/29/992e30aa-a27f-47b1-826c-f7c776dc18ef_697790.JPG",
@@ -1229,7 +1029,7 @@ const objlist = [
   },
   {
     info: {
-      id: "307776",
+      id: "30777613",
       name: "Barbeque Nation",
       cloudinaryImageId: "gti2wiagugkenckrffhw",
       locality: "Saradha College Main Road",
@@ -1309,7 +1109,7 @@ const objlist = [
   },
   {
     info: {
-      id: "699409",
+      id: "69940914",
       name: "Giani",
       cloudinaryImageId: "f2727f97fcba24a76e8ab24d4a0cdbf9",
       locality: "Near Kurinji Hospital",
@@ -1396,7 +1196,7 @@ const objlist = [
   },
   {
     info: {
-      id: "590258",
+      id: "59025815",
       name: "The Dessert Heaven - Pastry, Brownie and Cakes",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/23/b9caccd5-7f00-4085-9f01-baa6295474ff_590258.jpg",
@@ -1497,7 +1297,7 @@ const objlist = [
   },
   {
     info: {
-      id: "840940",
+      id: "84094016",
       name: "Biggies Burger",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/3/33ab7314-5fe4-4f8f-b3e0-04039d45bb39_840940.jpg",
@@ -1571,7 +1371,7 @@ const objlist = [
   },
   {
     info: {
-      id: "749781",
+      id: "74978117",
       name: "Chickpet Donne Biryani House",
       cloudinaryImageId: "f594f4f63d3e00e93203f02d40e38d24",
       locality: "Omalur Main Road",
@@ -1645,7 +1445,7 @@ const objlist = [
   },
   {
     info: {
-      id: "994620",
+      id: "99462018",
       name: "Topi vappa Biriyani",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/20/f068d7c0-afeb-4e60-a3ad-3995607121c1_994620.JPG",
@@ -1717,7 +1517,7 @@ const objlist = [
   },
   {
     info: {
-      id: "801451",
+      id: "80145119",
       name: "Makhani Darbar",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/20/07dc3711-c208-46be-8fda-f3e5872457a9_801451.JPG",
@@ -1792,7 +1592,7 @@ const objlist = [
   },
   {
     info: {
-      id: "420465",
+      id: "42046520",
       name: "Veg Meals by Lunchbox",
       cloudinaryImageId: "t9xy1pwt0r80wzft9qug",
       locality: "Advaitha Ashram Road",
@@ -1882,7 +1682,7 @@ const objlist = [
   },
   {
     info: {
-      id: "875456",
+      id: "87545621",
       name: "The Pizza Project by Oven Story",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/24/91d2268e-6ded-495d-b364-067f46799fb4_875456.jpg",
@@ -1956,7 +1756,7 @@ const objlist = [
   },
   {
     info: {
-      id: "566504",
+      id: "56650422",
       name: "Faasos' Signature Wraps & Rolls",
       cloudinaryImageId: "c583ca6ce40b426797a78ae2ac91f2ec",
       locality: "Advaitha Ashram Road",
@@ -2035,7 +1835,7 @@ const objlist = [
   },
   {
     info: {
-      id: "406649",
+      id: "40664923",
       name: "Kailash Parbat",
       cloudinaryImageId: "qicws178wmwaazsuf96u",
       locality: "Brindhavan Road",
@@ -2139,7 +1939,7 @@ const objlist = [
   },
   {
     info: {
-      id: "575244",
+      id: "57524424",
       name: "Veg Daawat by Behrouz",
       cloudinaryImageId: "2b579171cefc545ce6479e21c0016798",
       locality: "Advaitha Ashram Road",
@@ -2238,7 +2038,7 @@ const objlist = [
   },
   {
     info: {
-      id: "99310",
+      id: "9931025",
       name: "Barbequeen Restaurant",
       cloudinaryImageId: "kv1bmsdsxl4wmr7clowx",
       locality: "Greenways Road",
@@ -2334,7 +2134,7 @@ const objlist = [
   },
   {
     info: {
-      id: "835620",
+      id: "83562026",
       name: "Yum Me Too",
       cloudinaryImageId: "a76e4982fb7da5ff68e32fe5e8a13fec",
       locality: "Omalur Main Road",
@@ -2407,7 +2207,7 @@ const objlist = [
   },
   {
     info: {
-      id: "672391",
+      id: "67239127",
       name: "BurgerMan",
       cloudinaryImageId: "1356c614fa26b2872db27c8dc231c12b",
       locality: "Greenways Rd",
@@ -2496,7 +2296,7 @@ const objlist = [
   },
   {
     info: {
-      id: "697791",
+      id: "69779128",
       name: "Kaati Zone Rolls & Wraps",
       cloudinaryImageId: "b6fb5a0d41200a54b88be85c7d28185b",
       locality: "Sector 1",
@@ -2569,7 +2369,7 @@ const objlist = [
   },
   {
     info: {
-      id: "697795",
+      id: "69779529",
       name: "Cupcake Bliss Cake & Desserts",
       cloudinaryImageId: "6739bfad31dfb0a64fadf3c641ceae86",
       locality: "Sector 1",
@@ -2643,7 +2443,7 @@ const objlist = [
   },
   {
     info: {
-      id: "826613",
+      id: "82661330",
       name: "Pastas By Pizza Hut",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/e77822ad-4e01-4a38-ae6b-f50cd19352dd_826613.JPG",
@@ -2717,7 +2517,7 @@ const objlist = [
   },
   {
     info: {
-      id: "697945",
+      id: "69794531",
       name: "The Dessert Zone",
       cloudinaryImageId: "60bf26de8dfe2693dfc381c977861c5e",
       locality: "Sector 1",
@@ -2790,7 +2590,7 @@ const objlist = [
   },
   {
     info: {
-      id: "697946",
+      id: "69794632",
       name: "Momo Zone - The Momo Company",
       cloudinaryImageId: "25a1ecb092e31662cb4e7c99b10f6c65",
       locality: "Sector 1",
@@ -2864,7 +2664,7 @@ const objlist = [
   },
   {
     info: {
-      id: "693150",
+      id: "69315033",
       name: "Ovenfresh Cakes And Desserts",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/23/64547828-b631-4b05-bfe6-0384e172c78a_693150.jpg",
@@ -2947,7 +2747,7 @@ const objlist = [
   },
   {
     info: {
-      id: "760444",
+      id: "76044434",
       name: "Crusto's - Cheese Burst Pizza By Olio",
       cloudinaryImageId:
         "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/29/43b5475d-f6cf-4228-994f-f09210e7b38e_760444.jpg",
@@ -3023,9 +2823,9 @@ const objlist = [
 const Header = () => {
   return (
     <div className="header">
-      <div className="logo-container">
+      <div className="header-logo-container">
         <img
-          className="logo"
+          className="header-logo"
           src="https://tse2.mm.bing.net/th?id=OIG4.n2dyP_ydktvxnkqr1adX&pid=ImgGn"
           alt="foodmall logo"
         />
@@ -3042,21 +2842,26 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const { resData } = props;
+  const { cloudinaryImageId, name, cuisines, avgRating } = resData?.info;
+  // console.log(resData[0]);
   return (
     <div className="res-card">
       <div>
         <img
           className="res-logo"
-          src="https://tse2.mm.bing.net/th?id=OIG4.n2dyP_ydktvxnkqr1adX&pid=ImgGn"
+          src={
+            "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+            cloudinaryImageId
+          }
           alt="restaurant-logo"
         />
       </div>
 
-      <h3 className="res-detail">FoodMaLL</h3>
-      <h4 className="res-detail">pureveg food</h4>
-      <h5 className="res-detail">Rating 4.4✨</h5>
-      
+      <h3 className="res-detail">{name}</h3>
+      <h4 className="res-detail">{cuisines.join(", ")}</h4>
+      <h5 className="res-detail">{"Rating " + avgRating + "✨"}</h5>
     </div>
   );
 };
@@ -3065,7 +2870,32 @@ const Body = () => {
   return (
     <div className="body">
       <div className="res-container">
-        <RestaurantCard />
+        {objlist.map((resArgument) => (
+          <RestaurantCard key={resArgument?.info?.id} resData={resArgument} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="footer">
+      <ul>
+        <li>About Us</li>
+        <li>Career</li>
+        <li>Content</li>
+      </ul>
+      <ul>
+        <li>Legal</li>
+        <li>Social</li>
+      </ul>
+      <div className="footer-logo-container">
+        <img
+          className="footer-logo"
+          src="https://tse2.mm.bing.net/th?id=OIG4.n2dyP_ydktvxnkqr1adX&pid=ImgGn"
+          alt="foodmall logo"
+        />
       </div>
     </div>
   );
@@ -3076,6 +2906,7 @@ const Applayout = () => {
     <div className="app">
       <Header />
       <Body />
+      <Footer />
     </div>
   );
 };

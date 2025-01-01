@@ -1,9 +1,9 @@
-.app{
+.app {
   cursor: pointer;
 }
 
 .header {
-  cursor:default;
+  cursor: default;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   background-color: brown;
 }
 
-.logo {
+.header-logo {
   width: 99px;
   border-radius: 50%;
   padding: 0 6px;
@@ -49,17 +49,22 @@
 .nav-item ul li:hover {
   background-color: gold;
   transform: scale(1.1);
-  color: white;
+  color: brown;
 }
-
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .res-card {
-  cursor:default;
+  cursor: default;
   width: 200px;
+  margin: 26px 12px;
   padding: 6px;
   top: 160px;
   position: sticky;
-  background-color: white;
-
+  background-color: white; 
+  box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 7%;
 }
 
@@ -71,9 +76,58 @@
 
 .res-logo {
   width: 100%;
+  height: 150px;
   border-radius: 7%;
 }
 
-.res-detail{
+.res-detail {
   cursor: pointer;
+}
+
+.res-detail:hover{
+  text-shadow: 0.1px 0.2px gold;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0px;
+  bottom: 0px;
+  background-color: white;
+  color: burlywood;
+  cursor: default;
+  align-items: center;
+  box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.footer:hover{
+  background-color: brown;
+  font-weight:bold;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 36px 46px;
+}
+
+.footer ul li{
+   padding: 5px;
+   font-size: 20px;
+}
+.footer ul li:hover{
+  color: brown;
+   background-color: gold;
+  transform: scale(1.1);
+   padding: 10px 30px;
+}
+
+.footer-logo{
+  height: 10rem;
+  border-radius: 7%;
+  padding: 3px;
+}
+
+.footer-logo:hover{
+  background-color: gold;
 }
