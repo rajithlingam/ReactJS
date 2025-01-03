@@ -24,7 +24,6 @@
   border-radius: 50%;
   padding: 0 6px;
 }
-
 .nav-item {
   width: 50%;
 }
@@ -51,6 +50,49 @@
   transform: scale(1.1);
   color: brown;
 }
+
+.RC-Filter {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 36px;
+  top: 120px;
+  position: sticky;
+  background-color: white;
+}
+
+.RC-Filter:hover {
+  background-color: brown;
+}
+
+.RC-Filter ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 30px;
+  margin: 0px;
+}
+
+.RCF-li {
+  padding: 10px 40px;
+  list-style: none;
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  color: burlywood;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.RCF-li:hover{
+ background-color: gold;
+  transform: scale(1.1);
+  color: brown;
+}
+
 .res-container {
   display: flex;
   flex-wrap: wrap;
@@ -61,11 +103,12 @@
   width: 200px;
   margin: 26px 12px;
   padding: 6px;
-  top: 160px;
+  top: 180px;
   position: sticky;
-  background-color: white; 
+  background-color: white;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 7%;
+  line-height: 18px;
 }
 
 .res-card:hover {
@@ -84,7 +127,7 @@
   cursor: pointer;
 }
 
-.res-detail:hover{
+.res-detail:hover {
   text-shadow: 0.1px 0.2px gold;
 }
 
@@ -101,9 +144,9 @@
   align-items: center;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
 }
-.footer:hover{
+.footer:hover {
   background-color: brown;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .footer ul {
@@ -111,23 +154,23 @@
   padding: 36px 46px;
 }
 
-.footer ul li{
-   padding: 5px;
-   font-size: 20px;
+.footer ul li {
+  padding: 5px;
+  font-size: 20px;
 }
-.footer ul li:hover{
+.footer ul li:hover {
   color: brown;
-   background-color: gold;
+  background-color: gold;
   transform: scale(1.1);
-   padding: 10px 30px;
+  padding: 10px 30px;
 }
 
-.footer-logo{
+.footer-logo {
   height: 10rem;
   border-radius: 7%;
   padding: 3px;
 }
 
-.footer-logo:hover{
+.footer-logo:hover {
   background-color: gold;
 }

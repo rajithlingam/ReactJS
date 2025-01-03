@@ -10,9 +10,9 @@ const objList = [
       areaName: "Mega Reliance Green Field Mall",
       costForTwo: "₹350 for two",
       cuisines: ["Burgers", "American"],
-      avgRating: 4.4,
+      avgRating: 3.4,
       parentId: "166",
-      avgRatingString: "4.4",
+      avgRatingString: "3.4",
       totalRatingsString: "12K+",
       sla: {
         deliveryTime: 27,
