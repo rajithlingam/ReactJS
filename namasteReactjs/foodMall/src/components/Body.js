@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import Shimmer from "./Shimmer"
-
-
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [resCardFilter, setResCardFilter] = useState([]);
+  const [Search, setSearch] = useState("");
+
   console.log(resCardFilter);
 
   const fetchObjList = async () => {
@@ -14,18 +14,27 @@ const Body = () => {
     );
 
     const json = await API_objLink.json();
-    setResCardFilter(json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants);
-  }
-  useEffect(() => { fetchObjList(); }, []);
+    setResCardFilter(
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+  useEffect(() => {
+    fetchObjList();
+  }, []);
 
   return resCardFilter == 0 ? (
-      <div className="res-container">
-        <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
-      </div>
-    ) : (
+    <div className="res-container">
+      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />{" "}
+      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
+    </div>
+  ) : (
     <div className="body">
       <div className="RC-Filter">
         <ul>
+          <li className="RCF-li">
+            <input type="search" name="search" placeholder="Search Here..." value={Search} 
+            onChange={(e)=>{setSearch(e.target.value)}}></input>
+          </li>
           <li
             className="RCF-li"
             onClick={() => {

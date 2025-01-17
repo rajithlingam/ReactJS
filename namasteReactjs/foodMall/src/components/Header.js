@@ -1,6 +1,11 @@
 import { URL_LOGO } from "../utils/url";
+import { useState } from "react";
+
 
 const Header = () => {
+
+   const [Log, setLog] = useState("Login");
+
   return (
     <div className="header">
       <div className="header-logo-container">
@@ -16,6 +21,9 @@ const Header = () => {
           <li>Cart</li>
           <li>Offer</li>
           <li>Account</li>
+          <li onClick={()=>{
+            setLog("Logout");
+          }}>{Log}</li>
         </ul>
       </div>
     </div>
