@@ -78,7 +78,8 @@
 }
 
 .RCF-li {
-  padding: 10px 40px;
+  display: flex;
+  padding: 0px 20px;
   list-style: none;
   font-size: larger;
   font-weight: bold;
@@ -87,10 +88,33 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.RCF-li:hover{
- background-color: gold;
+.RCF-li:hover {
+  padding: 10px 30px;
+  background-color: gold;
   transform: scale(1.1);
   color: brown;
+}
+
+.Search{
+  cursor: default;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 100%;
+  position: sticky;
+  background-color: white;border-radius: 25px;
+}
+
+.Search:hover{
+  height: 35px;
+  border: none;
+  background-color:brown;
+  color: whitesmoke;
+  font: 1.23em serif;
 }
 
 .res-container {
@@ -98,6 +122,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .res-card {
   cursor: default;
   width: 200px;

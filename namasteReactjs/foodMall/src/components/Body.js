@@ -5,8 +5,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   const [resCardFilter, setResCardFilter] = useState([]);
   const [Search, setSearch] = useState("");
-
+  const [FilteredSearch, setFilteredSearch] = useState([]);
   console.log(resCardFilter);
+  console.log("resCardFilter");
 
   const fetchObjList = async () => {
     const API_objLink = await fetch(
@@ -15,9 +16,13 @@ const Body = () => {
 
     const json = await API_objLink.json();
     setResCardFilter(
-      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredSearch(
+      json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
   useEffect(() => {
     fetchObjList();
   }, []);
@@ -32,17 +37,36 @@ const Body = () => {
       <div className="RC-Filter">
         <ul>
           <li className="RCF-li">
-            <input type="search" name="search" placeholder="Search Here..." value={Search} 
-            onChange={(e)=>{setSearch(e.target.value)}}></input>
+            <input
+              className="Search"
+              type="search"
+              name="search"
+              placeholder="Search Here..."
+              value={Search}
+              onChange={
+                (onkeyup = (e) => {
+                  setSearch(e.target.value);
+                  const searchCard = resCardFilter.filter((searchFilter) =>
+                    searchFilter.info.name
+                      .toUpperCase()
+                      .includes(Search.toUpperCase())
+                  );
+                  console.log("searchcard");
+                  console.log(searchCard);
+
+                  setFilteredSearch(searchCard);
+                })
+              }
+            ></input>
           </li>
           <li
             className="RCF-li"
             onClick={() => {
-              const objFilter = resCardFilter.filter(
+              const objFilter = FilteredSearch.filter(
                 (res) => res.info.avgRating > 4
               );
               console.log(objFilter);
-              setResCardFilter(objFilter);
+              setFilteredSearch(objFilter);
             }}
           >
             Filter
@@ -51,7 +75,7 @@ const Body = () => {
       </div>
 
       <div className="res-container">
-        {resCardFilter.map((mapResArgument) => (
+        {FilteredSearch.map((mapResArgument) => (
           <RestaurantCard
             key={mapResArgument?.info?.id}
             resData={mapResArgument}
