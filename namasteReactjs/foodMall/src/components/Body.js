@@ -63,7 +63,7 @@ const Body = () => {
             className="RCF-li"
             onClick={() => {
               const objFilter = FilteredSearch.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res.info.avgRating > 4.4
               );
               console.log(objFilter);
               setFilteredSearch(objFilter);
