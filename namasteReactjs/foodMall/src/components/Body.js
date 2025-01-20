@@ -29,7 +29,7 @@ const Body = () => {
 
   return resCardFilter == 0 ? (
     <div className="res-container">
-      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />{" "}
+      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
       <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
     </div>
   ) : (
@@ -63,7 +63,7 @@ const Body = () => {
             className="RCF-li"
             onClick={() => {
               const objFilter = FilteredSearch.filter(
-                (res) => res.info.avgRating > 4.4
+                (res) => res.info.avgRating > 4
               );
               console.log(objFilter);
               setFilteredSearch(objFilter);
