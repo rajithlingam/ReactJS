@@ -1,7 +1,6 @@
 {
   "name": "foodmall",
   "version": "1.0.0",
-  "description": "FoodMall-react-web-app",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -11,15 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/rajithlingam/ReactJS.git#main"
   },
-  "author": "RAJITHLINGAM.",
+  "keywords": [
+    "foodmall"
+  ],
+  "author": "rajithlingam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rajithlingam/ReactJS/issues"
   },
   "homepage": "https://github.com/rajithlingam/ReactJS/tree/main#readme",
+  "description": "",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router": "^7.1.3",
     "react-router-dom": "^7.1.3"
   },
   "devDependencies": {
