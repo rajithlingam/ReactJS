@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 const Footer = () => {
   const d = new Date();
@@ -6,14 +7,29 @@ const Footer = () => {
   return (
     <div className="footer">
       <ul>
-        <li>About Us</li>
-        <li>Career</li>
-        <li>Content</li>
+        <Link to="/AboutUs">
+          <li>About Us</li>
+        </Link>
+
+        <Link to="/Career">
+          <li>Career</li>
+        </Link>
+
+        <Link to="/Content">
+          <li>Content</li>
+        </Link>
       </ul>
+
       <ul>
-        <li>Legal</li>
-        <li>Social</li>
+        <Link>
+          <li>Legal</li>
+        </Link>
+
+        <Link>
+          <li>Social</li>
+        </Link>
       </ul>
+
       <div className="footer-logo-container">
         <img
           className="footer-logo"

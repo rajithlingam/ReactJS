@@ -1,6 +1,6 @@
 import { URL_LOGO } from "../utils/url";
 import { useState } from "react";
-
+import{Link} from "react-router"
 
 const Header = () => {
 
@@ -9,21 +9,32 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-logo-container">
-        <img
-          className="header-logo"
-          src={URL_LOGO}
-          alt="foodmall logo"
-        />
+        <img className="header-logo" src={URL_LOGO} alt="foodmall logo" />
       </div>
 
       <div className="nav-item">
+
         <ul>
-          <li>Cart</li>
-          <li>Offer</li>
-          <li>Account</li>
-          <li onClick={()=>{
-            setLog("Logout");
-          }}>{Log}</li>
+
+          <Link to="/Cart">
+            <li>Cart</li>
+          </Link>
+
+          <Link to="/Offer">
+            <li>Offer</li>
+          </Link>
+
+          <Link to="/Account">
+            <li>Account</li>
+          </Link>
+
+          <li
+            onClick={() => {
+              setLog("Logout");
+            }}
+          >
+            {Log}
+          </li>
         </ul>
       </div>
     </div>

@@ -19,6 +19,15 @@
   background-color: brown;
 }
 
+.header a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from the parent (default text color) */
+}
+
+.header a:hover {
+  color: #f57c00; /* Add hover color for better user experience */
+}
+
 .header-logo {
   width: 99px;
   border-radius: 50%;
@@ -95,7 +104,7 @@
   color: brown;
 }
 
-.Search{
+.Search {
   cursor: default;
   border: none;
   display: flex;
@@ -106,13 +115,14 @@
   width: 200px;
   height: 100%;
   position: sticky;
-  background-color: white;border-radius: 25px;
+  background-color: white;
+  border-radius: 25px;
 }
 
-.Search:hover{
+.Search:hover {
   height: 35px;
   border: none;
-  background-color:brown;
+  background-color: brown;
   color: whitesmoke;
   font: 1.23em serif;
 }
@@ -189,6 +199,14 @@
   transform: scale(1.1);
   padding: 10px 30px;
 }
+.footer a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from the parent (default text color) */
+}
+
+.footer a:hover {
+  color: #f57c00; /* Add hover color for better user experience */
+}
 
 .footer-logo {
   height: 10rem;
@@ -198,4 +216,49 @@
 
 .footer-logo:hover {
   background-color: gold;
+}
+
+.Error { 
+  display: flex; /* Ensure the content is centered */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  height: 97vh; /* Use viewport height to fill the screen */
+  width: 100%; /* Full width */
+  padding: 0; /* No padding required */
+  margin: 0; /* Reset default margin */
+  background-color: black;
+  border-radius: 25px;
+}
+
+.Error ul {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center the list items */
+  align-items: center; /* Center horizontally */
+  padding: 0; /* Remove list padding */
+  margin: 0; /* Remove default margin */
+}
+
+.Error ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 180% 180%;
+  -webkit-background-clip: text; /* Clips gradient to text */
+  -webkit-text-fill-color: transparent; /* Makes text transparent */
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

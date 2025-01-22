@@ -16,10 +16,10 @@ const Body = () => {
 
     const json = await API_objLink.json();
     setResCardFilter(
-      json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredSearch(
-      json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -57,7 +57,7 @@ const Body = () => {
                   setFilteredSearch(searchCard);
                 })
               }
-            ></input>
+            />
           </li>
           <li
             className="RCF-li"
