@@ -16,10 +16,10 @@ const Body = () => {
 
     const json = await API_objLink.json();
     setResCardFilter(
-      json?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredSearch(
-      json?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -29,8 +29,7 @@ const Body = () => {
 
   return resCardFilter == 0 ? (
     <div className="res-container">
-      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
-      <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer /> <Shimmer />
+      <Shimmer />
     </div>
   ) : (
     <div className="body">
