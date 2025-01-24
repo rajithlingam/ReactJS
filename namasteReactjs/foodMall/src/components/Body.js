@@ -14,12 +14,14 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.664325&lng=78.1460142&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
-    const json = await API_objLink.json();
+    const jsonCardData = await API_objLink.json();
     setResCardFilter(
-      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsonCardData?.data?.cards[2].card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
     setFilteredSearch(
-      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsonCardData?.data?.cards[2].card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
   };
 

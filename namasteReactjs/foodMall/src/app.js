@@ -16,6 +16,8 @@ import Career from "./components/Career";
 import Contact from "./components/Contact";
 import Social from "./components/Social";
 import Legal from "./components/Legal";
+import RestaurantCard from "./components/RestaurantCard";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 const Applayout = () => {
   return (
@@ -33,8 +35,8 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path:"/",
-        element:<Body />,
+        path: "/",
+        element: <Body />,
         errorElement: <Error />,
       },
       {
@@ -75,6 +77,11 @@ const appRouter = createBrowserRouter([
       {
         path: "Legal",
         element: <Legal />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/RestaurantMenu/",
+        element: <RestaurantMenu />,
         errorElement: <Error />,
       },
     ],
