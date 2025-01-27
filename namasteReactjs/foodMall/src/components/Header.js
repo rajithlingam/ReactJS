@@ -1,10 +1,9 @@
 import { URL_LOGO } from "../utils/url";
 import { useState } from "react";
-import{Link} from "react-router"
+import { Link } from "react-router";
 
 const Header = () => {
-
-   const [Log, setLog] = useState("Login");
+  const [Log, setLog] = useState("Login");
 
   return (
     <div className="header">
@@ -13,8 +12,10 @@ const Header = () => {
       </div>
 
       <div className="nav-item">
-
         <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
 
           <Link to="/Cart">
             <li>Cart</li>

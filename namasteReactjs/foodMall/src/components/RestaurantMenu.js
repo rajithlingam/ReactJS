@@ -1,63 +1,47 @@
 import { useEffect, useState } from "react";
+import{useParams} from "react-router"
+import {API_URL_MENU} from "../utils/url"
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
   const [resMenu, setResMenu] = useState([]);
-  const [loading, setLoading] = useState(true);
-
+  const {resId} = useParams();
   useEffect(() => {
     fetchResMenu();
   }, []);
 
   const fetchResMenu = async () => {
     const API_objLink_Menu = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.664325&lng=78.1460142&restaurantId=431525&catalog_qa=undefined&submitAction=ENTER"
-    );
+       API_URL_MENU+resId);
 
     const jsonMenuData = await API_objLink_Menu.json();
 
-    // Check if the structure is valid before proceeding
-    if (
-      jsonMenuData?.data?.cards &&
-      jsonMenuData.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    ) {
-      const MapMenuData =
-        jsonMenuData.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.slice(
-          1
-        );
-
-      const menuItems = MapMenuData.flatMap((menuCard) =>
-        menuCard?.card?.card?.itemCards?.map((itemCard) => itemCard?.card?.info)
-      );
-
-      // Filter out invalid entries
-      const validMenuItems = menuItems.filter((item) => item?.name && item?.id);
-
-      console.log("Processed Menu Items:", validMenuItems);
-      setResMenu(validMenuItems);
-    }
-
-    setLoading(false); // Set loading to false after processing
+    const MapMenuData =
+      jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(1).flatMap((test) => test.card?.card?.itemCards);
+console.log(MapMenuData);
+    setResMenu(MapMenuData);
   };
 
-  return loading ? (
+  return resMenu == 0 ? (
     <Shimmer />
   ) : (
     <div className="ResMenu">
       <h1>Menu Items:</h1>
-      {resMenu.length === 0 ? (
-        <p>No menu items found.</p>
-      ) : (
-        resMenu.map((menuItem) => (
-          <div key={menuItem.id} className="menu-item">
-            <h3>{menuItem.name}</h3>
-            <p>Price: ₹{menuItem.defaultPrice/100 || "N/A"}</p>
-            <p>
-              Description: {menuItem.description || "No description available"}
-            </p>
-          </div>
-        ))
-      )}
+      {resMenu.map((menuItem) => (
+        <div key={menuItem?.card?.info?.id} className="menu-item">
+          <h3>{menuItem?.card?.info?.name || "Unnamed Item"}</h3>
+          <p>
+            Price: ₹
+            {menuItem?.card?.info?.finalPrice / 100 ||
+              menuItem?.card?.info?.price / 100 ||
+              "Sorry For the In Convinience Out Of Stock"}
+          </p>
+          <p>
+            Description:{" "}
+            {menuItem?.card?.info?.description || "No description available"}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };

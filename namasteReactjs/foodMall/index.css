@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 
-.Error { 
+.Error {
   display: flex; /* Ensure the content is centered */
   justify-content: center; /* Horizontal centering */
   align-items: center; /* Vertical centering */
@@ -46,7 +46,6 @@
     background-position: 0% 50%;
   }
 }
-
 
 .footer {
   display: flex;
@@ -215,11 +214,16 @@
   margin: 26px 12px;
   padding: 6px;
   top: 180px;
-  position: sticky;
+  /* position: sticky; */
   background-color: white;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 7%;
   line-height: 18px;
+}
+
+.res-container a {
+  text-decoration: none;
+  color: black;
 }
 
 .res-card:hover {
@@ -263,4 +267,95 @@
   background-color: brown;
   color: whitesmoke;
   font: 1.23em serif;
+}
+
+/* Main container for the restaurant menu */
+.ResMenu {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the width for better readability */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the menu */
+.ResMenu h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Container for each menu item */
+.menu-item {
+  display: flex;
+  flex-direction: column; /* Align item details vertically */
+  align-items: flex-start; /* Align text to the left */
+  padding: 20px;
+  margin: 15px 0;
+  width: 100%; /* Take up full width of the container */
+  max-width: 800px; /* Limit item width for better layout */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fef6e4;
+}
+
+/* Name of the menu item */
+.menu-item h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Price and description styling */
+.menu-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Highlight the price */
+.menu-item p:first-of-type {
+  color: #ff6f00;
+  font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .ResMenu {
+    padding: 10px;
+  }
+
+  .menu-item {
+    padding: 15px;
+  }
+
+  .ResMenu h1 {
+    font-size: 2rem;
+  }
+
+  .menu-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .menu-item p {
+    font-size: 0.9rem;
+  }
 }

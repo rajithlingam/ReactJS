@@ -16,7 +16,6 @@ import Career from "./components/Career";
 import Contact from "./components/Contact";
 import Social from "./components/Social";
 import Legal from "./components/Legal";
-import RestaurantCard from "./components/RestaurantCard";
 import RestaurantMenu from "./components/RestaurantMenu";
 
 const Applayout = () => {
@@ -80,7 +79,7 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/RestaurantMenu/",
+        path: "/RestaurantMenu/:resId",
         element: <RestaurantMenu />,
         errorElement: <Error />,
       },
