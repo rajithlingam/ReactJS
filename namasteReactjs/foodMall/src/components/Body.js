@@ -17,12 +17,10 @@ const Body = () => {
 
     const jsonCardData = await API_objLink.json();
     setResCardFilter(
-      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
+      jsonCardData?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredSearch(
-      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
+      jsonCardData?.data?.cards[3].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
