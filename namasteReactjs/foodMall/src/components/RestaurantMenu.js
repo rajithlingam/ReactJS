@@ -27,7 +27,10 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <div className="ResMenu">
-      <h1>Menu Items:</h1>
+      <div className="Menu-heading-txt">
+        <h1>Menu Items:</h1>
+      </div>
+
       {resMenu.map((menuItem) => (
         <div key={menuItem?.card?.info?.id} className="menu-item">
           <div className="menu-details">

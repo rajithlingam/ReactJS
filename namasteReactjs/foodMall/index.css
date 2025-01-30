@@ -270,19 +270,28 @@
 }
 
 .ResMenu {
+  display: flex;
+  flex-wrap: wrap;
   font-family: serif;
+  justify-content: center;
   margin: 20px;
   padding: 10px;
 }
 
+.Menu-heading-txt{
+  display: block;
+  width: 100%;
+}
+
 .menu-item {
   display: flex;
+  width: 40%;;
   justify-content: space-between;
   align-items: center;
   border: 1px solid burlywood;
   border-radius: 8px;
   padding: 15px;
-  margin: 15px 0;
+  margin: 15px 15px;
   background-color: white; /* Light golden background */
   box-shadow: 0 2px 6px brown;
   transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover */

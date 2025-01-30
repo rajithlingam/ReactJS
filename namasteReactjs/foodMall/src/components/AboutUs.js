@@ -1,9 +1,12 @@
-const AboutUs = () => {
-  return (
-    <div className="About">
-      <h1>Welcome to FoodMall</h1>
-    </div>
-  );
-};
+import React from "react";
+import aboutUsData from "../utils/aboutUsData"
 
+class UserClass extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+
+  }
+}
 export default AboutUs;
