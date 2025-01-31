@@ -337,3 +337,67 @@
 .add-button:hover {
   background-color: darkgreen;
 }
+
+/* Add these styles to your existing CSS file */
+.about-us {
+  padding: 20px;
+  font-family: serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about-us h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: brown;
+  margin-bottom: 20px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-member {
+  background-color: white;
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 15px;
+  width: 290px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-member:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: burlywood;
+}
+
+.team-member p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.team-member a {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+  color: brown;
+}
