@@ -1,27 +1,37 @@
-// src/components/AboutUs.js
+//
+
 import React, { Component } from "react";
-import aboutUsData from "../utils/aboutUsData"; // Import the JSON data
+import aboutUsData from "../utils/aboutUsData";
 
 class AboutUs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teamMembers: [], // Initialize an empty array for team members
+      teamMembers: [],
+      count: 0,
     };
+    console.log("constructor();");
   }
 
-  // Fetch data when the component mounts
   componentDidMount() {
-    this.setState({ teamMembers: aboutUsData }); // Set the data to state
+    this.setState({ teamMembers: aboutUsData });
+    console.log("componentDidMount");
   }
 
   render() {
-    const { teamMembers } = this.state;
-
+    const { teamMembers, count } = this.state;
+    console.log("render();");
     return (
       <div className="about-us">
         <h1>About Us</h1>
-        <div className="team-list">
+
+        <div
+          className="team-list"
+          onClick={() => {
+            this.setState({ count: count + 1 });
+            console.log(count);
+          }}
+        >
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
               <h2>{member.username}</h2>
