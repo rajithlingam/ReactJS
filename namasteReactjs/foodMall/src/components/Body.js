@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {API_URL_RESCARD}from "../utils/url"
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router"
@@ -11,9 +12,7 @@ const Body = () => {
   console.log("resCardFilter");
 
   const fetchObjList = async () => {
-    const API_objLink = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.664325&lng=78.1460142&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const API_objLink = await fetch(API_URL_RESCARD); 
 
     const jsonCardData = await API_objLink.json();
     setResCardFilter(
