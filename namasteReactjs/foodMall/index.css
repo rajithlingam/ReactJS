@@ -111,6 +111,7 @@
   top: 0px;
   position: sticky;
   background-color: white;
+    z-index: 10;
 }
 
 .header:hover {
@@ -170,7 +171,8 @@
   height: 36px;
   top: 120px;
   position: sticky;
-  background-color: white;
+  background-color: white; 
+  z-index: 10;
 }
 
 .RC-Filter:hover {
@@ -400,4 +402,25 @@
 .team-member a:hover {
   text-decoration: underline;
   color: brown;
+}
+
+.Promoted-Res-Card {
+  position: relative;
+  display: flex; 
+  overflow:hidden;
+  z-index: 1;
+  }
+
+  .Promoted-Res-Label {
+  position: absolute;
+  top: 148px;
+  right: 18px;
+  color: white;
+  text-shadow: 0px 1px brown;
+  background-color: goldenrod;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 5px;
+  
 }

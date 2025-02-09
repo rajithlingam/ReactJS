@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {API_URL_RESCARD}from "../utils/url"
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedResCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router"
 
@@ -8,6 +8,9 @@ const Body = () => {
   const [resCardFilter, setResCardFilter] = useState([]);
   const [Search, setSearch] = useState("");
   const [FilteredSearch, setFilteredSearch] = useState([]);
+
+  const PromotedResCard = withPromotedResCard(RestaurantCard);
+
   console.log(resCardFilter);
   console.log("resCardFilter");
 
@@ -75,11 +78,15 @@ const Body = () => {
 
       <div className="res-container">
         {FilteredSearch.map((mapResArgument) => (
-          <Link
-            key={mapResArgument?.info?.id} 
+          <Link className="Rescard-Link"
+            key={mapResArgument?.info?.id}
             to={"/RestaurantMenu/" + mapResArgument?.info?.id}
           >
-            <RestaurantCard resData={mapResArgument} />
+            {mapResArgument?.info.aggregatedDiscountInfoV3 ? (
+              <PromotedResCard resData={mapResArgument} />
+            ) : (
+              <RestaurantCard resData={mapResArgument} />
+            )}
           </Link>
         ))}
       </div>
