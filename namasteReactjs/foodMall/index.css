@@ -1,37 +1,39 @@
+/* Global Styles */
 .app {
   cursor: pointer;
 }
 
+/* Error Page Styles */
 .Error {
-  display: flex; /* Ensure the content is centered */
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
-  height: 97vh; /* Use viewport height to fill the screen */
-  width: 100%; /* Full width */
-  padding: 0; /* No padding required */
-  margin: 0; /* Reset default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   background-color: black;
   border-radius: 25px;
 }
 
 .Error ul {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center the list items */
-  align-items: center; /* Center horizontally */
-  padding: 0; /* Remove list padding */
-  margin: 0; /* Remove default margin */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .Error ul li {
   display: inline-block;
   list-style: none;
-  font-size: 2rem; /* Adjust font size */
-  font-weight: bold; /* Bold text */
+  font-size: 2rem;
+  font-weight: bold;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 180% 180%;
-  -webkit-background-clip: text; /* Clips gradient to text */
-  -webkit-text-fill-color: transparent; /* Makes text transparent */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: gradient-animation 18s ease infinite;
 }
 
@@ -47,19 +49,21 @@
   }
 }
 
+/* Footer Styles */
 .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin: 20px 0px;
-  bottom: 0px;
+  margin: 20px 0;
+  bottom: 0;
   background-color: white;
   color: burlywood;
   cursor: default;
   align-items: center;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
 }
+
 .footer:hover {
   background-color: brown;
   font-weight: bold;
@@ -74,19 +78,21 @@
   padding: 5px;
   font-size: 20px;
 }
+
 .footer ul li:hover {
   color: brown;
   background-color: gold;
   transform: scale(1.1);
   padding: 10px 30px;
 }
+
 .footer a {
-  text-decoration: none; /* Removes underline */
-  color: inherit; /* Inherits color from the parent (default text color) */
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer a:hover {
-  color: #f57c00; /* Add hover color for better user experience */
+  color: #f57c00;
 }
 
 .footer-logo {
@@ -99,19 +105,20 @@
   background-color: gold;
 }
 
+/* Header Styles */
 .header {
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px 0px;
+  margin: 20px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   width: 100%;
-  top: 0px;
+  top: 0;
   position: sticky;
   background-color: white;
-    z-index: 10;
+  z-index: 10;
 }
 
 .header:hover {
@@ -119,12 +126,12 @@
 }
 
 .header a {
-  text-decoration: none; /* Removes underline */
-  color: inherit; /* Inherits color from the parent (default text color) */
+  text-decoration: none;
+  color: inherit;
 }
 
 .header a:hover {
-  color: #f57c00; /* Add hover color for better user experience */
+  color: #f57c00;
 }
 
 .header-logo {
@@ -132,6 +139,7 @@
   border-radius: 50%;
   padding: 0 6px;
 }
+
 .nav-item {
   width: 50%;
 }
@@ -139,8 +147,8 @@
 .nav-item ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 30px;
-  margin: 0px;
+  padding: 0 30px;
+  margin: 0;
 }
 
 .nav-item ul li {
@@ -159,19 +167,20 @@
   color: brown;
 }
 
+/* Filter Styles */
 .RC-Filter {
   cursor: default;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px 0px;
+  margin: 20px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 36px;
   top: 120px;
   position: sticky;
-  background-color: white; 
+  background-color: white;
   z-index: 10;
 }
 
@@ -182,13 +191,13 @@
 .RC-Filter ul {
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 30px;
-  margin: 0px;
+  padding: 0 30px;
+  margin: 0;
 }
 
 .RCF-li {
   display: flex;
-  padding: 0px 20px;
+  padding: 0 20px;
   list-style: none;
   font-size: larger;
   font-weight: bold;
@@ -204,6 +213,7 @@
   color: brown;
 }
 
+/* Restaurant Container Styles */
 .res-container {
   display: flex;
   flex-wrap: wrap;
@@ -215,8 +225,6 @@
   width: 200px;
   margin: 26px 12px;
   padding: 6px;
-  top: 180px;
-  /* position: sticky; */
   background-color: white;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 7%;
@@ -248,6 +256,7 @@
   text-shadow: 0.1px 0.2px gold;
 }
 
+/* Search Styles */
 .Search {
   cursor: default;
   border: none;
@@ -271,6 +280,7 @@
   font: 1.23em serif;
 }
 
+/* Restaurant Menu Styles */
 .ResMenu {
   display: flex;
   flex-wrap: wrap;
@@ -280,35 +290,33 @@
   padding: 10px;
 }
 
-.Menu-heading-txt{
+.Menu-heading-txt {
   display: block;
   width: 100%;
 }
 
 .menu-item {
   display: flex;
-  width: 40%;;
   justify-content: space-between;
   align-items: center;
   border: 1px solid burlywood;
   border-radius: 8px;
   padding: 15px;
-  margin: 15px 15px;
-  background-color: white; /* Light golden background */
+  margin: 10px 0;
+  background-color: white;
   box-shadow: 0 2px 6px brown;
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .menu-item:hover {
-  transform: scale(1.02); /* Slight zoom on hover */
-  box-shadow: 1px 4px 12px gold; /* Enhanced shadow on hover */
+  transform: scale(1.02);
+  box-shadow: 1px 4px 12px gold;
 }
 
 .menu-image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
 }
 
 .Menu-Image {
@@ -317,12 +325,12 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
-  transition: transform 0.3s; /* Smooth zoom transition for images */
+  transition: transform 0.3s;
 }
 
 .Menu-Image:hover {
-  transform: scale(1.1); /* Zoom in on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .add-button {
@@ -340,7 +348,7 @@
   background-color: darkgreen;
 }
 
-/* Add these styles to your existing CSS file */
+/* About Us Styles */
 .about-us {
   padding: 20px;
   font-family: serif;
@@ -404,14 +412,15 @@
   color: brown;
 }
 
+/* Promoted Restaurant Card Styles */
 .Promoted-Res-Card {
   position: relative;
-  display: flex; 
-  overflow:hidden;
+  display: flex;
+  overflow: hidden;
   z-index: 1;
-  }
+}
 
-  .Promoted-Res-Label {
+.Promoted-Res-Label {
   position: absolute;
   top: 148px;
   right: 18px;
@@ -422,5 +431,177 @@
   font-weight: bold;
   padding: 6px 8px;
   border-radius: 5px;
-  
+}
+
+/* Restaurant Menu Categories Styles */
+.RestaurantMenu-Categories {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  width: 90%;
+}
+
+.RestaurantMenu-Categories:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.RMC-TITLE-CONTAINER {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.RMC-TITLE-CONTAINER:hover {
+  background-color: #e9ecef;
+}
+
+.RMC-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.RMC-TITLE-CONTAINER span:last-child {
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.RestaurantMenu-Categories.open .RMC-TITLE-CONTAINER span:last-child {
+  transform: rotate(180deg);
+}
+
+.MenuItemList {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.RestaurantMenu-Categories.open .MenuItemList {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.Menu-Description{
+  font-size: 90%;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Error ul li {
+    font-size: 1.5rem;
+  }
+
+  .footer ul {
+    padding: 20px;
+  }
+
+  .footer ul li {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item ul {
+    justify-content: center;
+  }
+
+  .nav-item ul li {
+    padding: 10px 20px;
+  }
+
+  .RC-Filter ul {
+    padding: 0 10px;
+  }
+
+  .RCF-li {
+    padding: 0 10px;
+  }
+
+  .res-card {
+    width: 150px;
+    margin: 10px;
+  }
+
+  .res-logo {
+    height: 100px;
+  }
+
+  .Search {
+    width: 100%;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Menu-Image {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .Promoted-Res-Label {
+    top: 100px;
+    right: 10px;
+    font-size: 14px;
+  }
+
+  .RestaurantMenu-Categories {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Error ul li {
+    font-size: 1.2rem;
+  }
+
+  .footer ul {
+    padding: 10px;
+  }
+
+  .footer ul li {
+    font-size: 14px;
+  }
+
+  .nav-item ul li {
+    padding: 5px 10px;
+  }
+
+  .res-card {
+    width: 120px;
+  }
+
+  .res-logo {
+    height: 80px;
+  }
+
+  .Promoted-Res-Label {
+    top: 80px;
+    right: 5px;
+    font-size: 12px;
+  }
 }

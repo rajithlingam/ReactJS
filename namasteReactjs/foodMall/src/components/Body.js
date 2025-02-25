@@ -18,6 +18,8 @@ const Body = () => {
     const API_objLink = await fetch(API_URL_RESCARD); 
 
     const jsonCardData = await API_objLink.json();
+    console.log("jsonCardData");
+    console.log(jsonCardData);
     setResCardFilter(
       jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );

@@ -12,11 +12,26 @@ const useRestaurantMenu = (resId) => {
 
     const jsonMenuData = await API_objLink_Menu.json();
 
-    const MapMenuData =
-      jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-        ?.slice(1)
+    {
+      /**
+   const MapMenuData =
+      jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(1)
         .flatMap((test) => test.card?.card?.itemCards);
-    console.log(MapMenuData);
+    console.log(MapMenuData); 
+    
+    */
+    }
+
+    const MapMenuData =
+      jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+        (urmfilter) =>
+          urmfilter.card?.card?.["@type"] ===
+            "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" ||
+          urmfilter.card?.card?.["@type"] ===
+            "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+      );
+    // console.log(MapMenuData); 
+
     setResMenu(MapMenuData);
   };
   return resMenu;
