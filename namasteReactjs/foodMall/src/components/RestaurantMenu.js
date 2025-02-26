@@ -8,8 +8,8 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const resMenu = useRestaurantMenu(resId);
   const [isOpen, setIsOpen] = useState(0);
-console.log("RestaurantMenu");
-console.log(resMenu);
+  console.log("RestaurantMenu");
+  console.log(resMenu);
   return resMenu.length === 0 ? (
     <Shimmer />
   ) : (
@@ -22,8 +22,8 @@ console.log(resMenu);
         <RestaurantMenuCategories
           key={menuItem.card.card.title}
           data={menuItem.card.card}
-          parentControledAccordion={index===isOpen?true:false}
-          parentControledAccordionUpdate={()=>setIsOpen(index)}
+          parentControledAccordion={index === isOpen ? true : false}
+          parentControledAccordionUpdate={() => setIsOpen(index)}
         />
       ))}
     </div>

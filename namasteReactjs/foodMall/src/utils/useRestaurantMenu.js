@@ -12,16 +12,6 @@ const useRestaurantMenu = (resId) => {
 
     const jsonMenuData = await API_objLink_Menu.json();
 
-    {
-      /**
-   const MapMenuData =
-      jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.slice(1)
-        .flatMap((test) => test.card?.card?.itemCards);
-    console.log(MapMenuData); 
-    
-    */
-    }
-
     const MapMenuData =
       jsonMenuData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
         (urmfilter) =>

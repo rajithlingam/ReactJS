@@ -1,48 +1,57 @@
-import { URL_LOGO } from "../utils/url";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
+import { URL_LOGO } from "../utils/url";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [Log, setLog] = useState("Login");
-  const onlinestatus = useOnlineStatus();
+  const onlineStatus = useOnlineStatus();
+  const { name } = useContext(UserContext);
+  const [username, setUsername] = useState(name);
+
+  const handleLogin = () => {
+    const updateUserName = prompt("Kindly Enter Your Name");
+    if (updateUserName) {
+      setUsername(updateUserName);
+      setLog("Logout");
+    }
+  };
 
   return (
-    <div className="header">
-      <div className="header-logo-container">
-        <img className="header-logo" src={URL_LOGO} alt="foodmall logo" />
+    <UserContext.Provider value={{ name: username }}>
+      <div className="header">
+        <div className="header-logo-container">
+          <img className="header-logo" src={URL_LOGO} alt="foodmall logo" />
+        </div>
+
+        <div className="nav-item">
+          <ul>
+            <li>Online Status: {onlineStatus ? "💚" : "⛔"}</li>
+
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+
+            <Link to="/Cart">
+              <li>Cart</li>
+            </Link>
+
+            <Link to="/Offer">
+              <li>Offer</li>
+            </Link>
+
+            <Link to="/Account">
+              <li>Account</li>
+            </Link>
+
+            <li onClick={handleLogin}>{Log}</li>
+
+            <li>{username}</li>
+          </ul>
+        </div>
       </div>
-
-      <div className="nav-item">
-        <ul>
-          <li>Online Status: {onlinestatus ? "💚" : "⛔"}</li>
-          
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-
-          <Link to="/Cart">
-            <li>Cart</li>
-          </Link>
-
-          <Link to="/Offer">
-            <li>Offer</li>
-          </Link>
-
-          <Link to="/Account">
-            <li>Account</li>
-          </Link>
-
-          <li
-            onClick={() => {
-              setLog("Logout");
-            }}
-          >
-            {Log}
-          </li>
-        </ul>
-      </div>
-    </div>
+    </UserContext.Provider>
   );
 };
 

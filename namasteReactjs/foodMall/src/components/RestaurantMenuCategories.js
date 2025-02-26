@@ -23,7 +23,7 @@ const RestaurantMenuCategories = ({
       </div>
       {parentControledAccordion && <MenuItemList items={itemData} />}
     </div>
-  );
+  ); 
 };
 
 export default RestaurantMenuCategories;

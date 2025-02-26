@@ -17,7 +17,7 @@ class AboutUs extends Component {
     this.setState({ teamMembers: aboutUsData });
     console.log("componentDidMount");
   }
-
+ 
   render() {
     const { teamMembers, count } = this.state;
     console.log("render();");

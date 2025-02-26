@@ -2,8 +2,7 @@ import { URL_CDN_LOGO } from "../utils/url";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const {
-    cloudinaryImageId, name,cuisines, avgRating} = resData?.info;
+  const { cloudinaryImageId, name, cuisines, avgRating } = resData?.info;
 
   // console.log(resData[0]);
   //console.log(aggregatedDiscountInfoV3);

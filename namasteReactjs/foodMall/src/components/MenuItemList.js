@@ -1,7 +1,6 @@
 import { URL_CDN_LOGO } from "../utils/url";
 
 const MenuItemList = ({ items }) => {
- 
   return (
     <div className="MenuItemList">
       {items.map((Menuitem) => (
@@ -19,7 +18,8 @@ const MenuItemList = ({ items }) => {
                 {Menuitem?.card?.info?.finalPrice / 100 ||
                   Menuitem?.card?.info?.defaultPrice / 100 ||
                   Menuitem?.card?.info?.price / 100 ||
-                  "Sorry For the Inconvenience, Out of Stock"}/-
+                  "Sorry For the Inconvenience, Out of Stock"}
+                /-
               </p>
               <p className="Menu-Description">
                 Description:{" "}
