@@ -11,10 +11,14 @@ const Header = () => {
   const [username, setUsername] = useState(name);
 
   const handleLogin = () => {
-    const updateUserName = prompt("Kindly Enter Your Name");
-    if (updateUserName) {
+   
+    if (Log === "Login") {
+       const updateUserName = prompt("Kindly Enter Your Name");
       setUsername(updateUserName);
       setLog("Logout");
+    } else {
+       setUsername("Guest");
+      setLog("Login");
     }
   };
 

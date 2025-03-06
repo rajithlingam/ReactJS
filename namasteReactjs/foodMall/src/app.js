@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
-
+import { Provider } from "react-redux";
 import Error from "./components/Error";
 
 import Header from "./components/Header";
@@ -17,6 +17,7 @@ import Contact from "./components/Contact";
 import Social from "./components/Social";
 import Legal from "./components/Legal";
 import Shimmer from "./components/Shimmer";
+import appStore from "./utils/appStore";
 
 //import RestaurantMenu from "./components/RestaurantMenu";
 const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
@@ -24,12 +25,15 @@ const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
 const Applayout = () => {
   return (
     <div className="app">
-      <Header />
-      <Outlet />
-      <Footer />
+      <Provider store={appStore}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Provider>
     </div>
   );
 };
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
