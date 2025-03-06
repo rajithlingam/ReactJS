@@ -1,6 +1,3 @@
-Here's a professional `README.md` for your **FoodMall** project:  
-
-```markdown
 # 🍔 FoodMall – A React-Based Food Ordering App  
 
 FoodMall is a modern, responsive, and user-friendly **food ordering application** built using **React.js**. It provides a seamless browsing experience for users to explore restaurant menus, view food details, and place orders efficiently.  
@@ -60,7 +57,4 @@ This project is licensed under the **MIT License**.
 
 ### 🔗 Connect with Me  
 - **LinkedIn**: [rajithlingam](https://www.linkedin.com/in/rajithlingam)  
-- **GitHub**: [rajithlingam](https://github.com/rajithlingam)  
-```
-
-Let me know if you need any changes! 🚀🔥
+- **GitHub**: [rajithlingam](https://github.com/rajithlingam)
