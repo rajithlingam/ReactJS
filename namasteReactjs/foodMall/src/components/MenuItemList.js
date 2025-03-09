@@ -1,6 +1,19 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 import { URL_CDN_LOGO } from "../utils/url";
 
 const MenuItemList = ({ items }) => {
+  const dispatch = useDispatch();
+
+  const dispatchBtn = (addedCartitem) => {
+    dispatch(addItem(addedCartitem));
+  };
+
+  // console.log("dispatchBtn");
+  // console.log(dispatchBtn);
+  // console.log("dispatch");
+  // console.log(dispatch);
+
   return (
     <div className="MenuItemList">
       {items.map((Menuitem) => (
@@ -38,7 +51,12 @@ const MenuItemList = ({ items }) => {
             ) : (
               <p className="no-image">Image not available</p>
             )}
-            <button className="add-button">ADD</button>
+            <button
+              className="add-button"
+              onClick={() => dispatchBtn(Menuitem)}
+            >
+              ADD
+            </button>
           </div>
         </div>
       ))}

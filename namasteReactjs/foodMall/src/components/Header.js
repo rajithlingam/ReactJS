@@ -4,15 +4,18 @@ import { URL_LOGO } from "../utils/url";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
-import { addItem } from "../utils/cartSlice";
 
 const Header = () => {
   const [Log, setLog] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const { name } = useContext(UserContext);
   const [username, setUsername] = useState(name);
+
   const showSelector = useSelector((store) => store.cart.items);
-  // console.log(showSelector);
+ 
+  console.log("showSelector");
+  console.log(showSelector);
+
   const handleLogin = () => {
     if (Log === "Login") {
       const updateUserName = prompt("Kindly Enter Your Name");
