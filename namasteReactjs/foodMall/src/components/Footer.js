@@ -15,17 +15,17 @@ const Footer = () => {
           <li>Career</li>
         </Link>
 
-        <Link to="/Content">
-          <li>Content</li>
+        <Link to="/Contact">
+          <li>Contact</li>
         </Link>
       </ul>
 
       <ul>
-        <Link>
+        <Link to="/Legal">
           <li>Legal</li>
         </Link>
 
-        <Link>
+        <Link to="/Social">
           <li>Social</li>
         </Link>
       </ul>

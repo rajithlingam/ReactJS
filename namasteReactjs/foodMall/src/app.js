@@ -50,11 +50,11 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
         errorElement: <Error />,
       },
-      {
-        path: "/Offer",
-        element: <Offer />,
-        errorElement: <Error />,
-      },
+      // {
+      //   path: "/Offer",
+      //   element: <Offer />,
+      //   errorElement: <Error />,
+      // },
       {
         path: "/Account",
         element: <Account />,
