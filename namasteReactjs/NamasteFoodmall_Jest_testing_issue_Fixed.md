@@ -1,3 +1,30 @@
+### **Fixing "TextEncoder is not defined" in Jest – Step-by-Step Guide**  
+
+If you're encountering the **"ReferenceError: TextEncoder is not defined"** error while running Jest tests in your React project, follow these steps to fix it.  
+
+---
+
+### **Step 1: Create `jest.setup.js`**  
+1. Navigate to the **root directory** of your project.  
+2. Create a new file named **`jest.setup.js`** (if it doesn’t already exist).  
+3. Add the following content:  
+
+   ```javascript
+   import "@testing-library/jest-dom";
+   import { TextEncoder, TextDecoder } from "util";
+
+   global.TextEncoder = TextEncoder;
+   global.TextDecoder = TextDecoder;
+   ```
+
+   This ensures that `TextEncoder` and `TextDecoder` are globally available during testing.  
+
+---
+
+### **Step 2: Update Jest Configuration**  
+Modify the **`jest.config.js`** file in your project root and ensure it includes:  
+
+```javascript
 /**
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
@@ -196,3 +223,80 @@ const config = {
 };
 
 module.exports = config;
+```
+
+This configuration ensures Jest loads `jest.setup.js` before running any tests and sets `jsdom` as the test environment.  
+
+---
+
+### **Step 3: Install Required Dependencies**  
+Run the following command to install necessary testing dependencies:  
+
+```bash
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom util
+```
+
+This ensures Jest, React Testing Library, and utilities like `TextEncoder` are correctly installed.  
+
+---
+
+### **Step 4: Clear Jest Cache & Reinstall Dependencies**  
+To remove any cached configurations and reinstall dependencies:  
+
+1. Clear Jest's cache:  
+   ```bash
+   npx jest --clearCache
+   ```
+
+2. Delete `node_modules` and `package-lock.json`:  
+   ```bash
+   rm -rf node_modules package-lock.json
+   ```
+
+3. Reinstall dependencies:  
+   ```bash
+   npm install
+   ```
+
+---
+
+### **Step 5: Check Your Node.js Version**  
+Ensure you're using a compatible Node.js version. Run:  
+
+```bash
+node -v
+```
+
+If your version is outdated, upgrade to the latest LTS version:  
+
+```bash
+nvm install --lts
+nvm use --lts
+```
+
+---
+
+### **Step 6: Run Tests Again**  
+Once everything is set up, run your Jest tests using:  
+
+```bash
+npm test -- --coverage
+```
+
+or simply:  
+
+```bash
+npm run test
+```
+
+---
+
+### **Final Check**  
+✅ **Created `jest.setup.js`** and defined `TextEncoder`  
+✅ **Updated Jest configuration (`jest.config.js`)**  
+✅ **Installed all necessary dependencies**  
+✅ **Cleared Jest cache and reinstalled dependencies**  
+✅ **Ensured Node.js version is up-to-date**  
+✅ **Successfully ran tests without errors**  
+
+Now, your Jest tests should work fine without the **"TextEncoder is not defined"** error! 🚀

@@ -9,7 +9,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 
 import Cart from "./components/Cart";
-import Offer from "./components/Offer";
+// import Offer from "./components/Offer";
 import Account from "./components/Account";
 import AboutUs from "./components/AboutUs";
 import Career from "./components/Career";
