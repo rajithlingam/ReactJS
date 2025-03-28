@@ -90,11 +90,6 @@ This generates an optimized `dist/` folder for deployment.
 ## Contributing
 Feel free to **fork** this repository and submit a **pull request** for improvements!
 
-## Contact
-📧 Email: work.rajithlingam@gmail.com  
-🔗 LinkedIn: [Rajithlingam](https://www.linkedin.com/in/rajithlingam)  
-🐙 GitHub: [Rajithlingam](https://github.com/rajithlingam)
-
 ---
 Happy Coding! 🚀
 
