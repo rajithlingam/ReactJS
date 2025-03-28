@@ -1,60 +1,100 @@
-# 🍔 FoodMall – A React-Based Food Ordering App  
+# FoodMall - React Web App
 
-FoodMall is a modern, responsive, and user-friendly **food ordering application** built using **React.js**. It provides a seamless browsing experience for users to explore restaurant menus, view food details, and place orders efficiently.  
+## Overview
+FoodMall is a **React-based food ordering application** that allows users to browse restaurants, view menus, and manage their cart. The app is built with **React 19, Redux Toolkit, React Router, and Parcel** for an optimized experience.
 
-## 🚀 Features  
+## Features
+- 🌟 **Restaurant Listings** - Browse and search for restaurants.
+- 🛒 **Shopping Cart** - Add or remove items with Redux state management.
+- 🔄 **Dynamic Routing** - Uses React Router for seamless navigation.
+- 🚀 **Optimized Performance** - Implements lazy loading and Redux Toolkit.
+- ✅ **Unit Testing** - Uses Jest and React Testing Library.
 
-- 🏪 **Restaurant Listing** – Displays a list of restaurants with key details.  
-- 🍽 **Dynamic Menu** – Fetches and displays menus with images and prices.  
-- 🔍 **Search & Filter** – Helps users find their favorite food quickly.  
-- ⚡ **Optimized Performance** – Uses React's best practices for speed.  
-- 📱 **Responsive Design** – Works across all devices, including mobile.  
+## Installation & Setup
+### Prerequisites
+Ensure you have **Node.js** and **npm** installed.
 
-## 🛠 Tech Stack  
-
-- **Frontend**: React.js, Tailwind CSS
-- **State Management**: React Hooks (`useState`, `useEffect`, `useContext`)  
-- **API Handling**: Fetch
-- **Routing**: React Router
-- **Bundler**: Parcel
-
-## 📦 Installation & Setup  
-
-### 1️⃣ Clone the Repository  
+### Clone Repository
 ```sh
 git clone https://github.com/rajithlingam/ReactJS.git
-cd ReactJS/namasteReactjs/foodMall
+cd foodMall
 ```
 
-### 2️⃣ Install Dependencies  
+### Install Dependencies
 ```sh
 npm install
 ```
 
-### 3️⃣ Run the Development Server  
+### Run Development Server
 ```sh
 npm start
 ```
-The app will be available at `http://localhost:1234`.
+This starts a local server at `http://localhost:1234/` using **Parcel**.
 
-## 🚀 Deployment  
+## Project Structure
+```plaintext
+foodMall/
+│── src/
+│   ├── components/
+│   │   ├── Header.js  # Navigation Bar
+│   │   ├── Body.js  # Main Content & Restaurant Listings
+│   │   ├── RestaurantCard.js  # Displays individual restaurant
+│   │   ├── Cart.js  # Shopping Cart functionality
+│   │   ├── Error.js  # Error handling
+│   ├── utils/
+│   │   ├── cartSlice.js  # Redux cart slice
+│   │   ├── url.js  # API URLs and static assets
+│── package.json  # Project configuration
+│── babel.config.js  # Babel setup
+│── .parcelrc  # Parcel bundler config
+│── README.md  # Documentation
+```
 
-To build the project for production, use:  
+## Key Components
+### 1️⃣ **`app.js` - Main Entry Point**
+- Wraps the application with Redux Provider.
+- Uses `createBrowserRouter` for routing.
+- Lazy loads components for performance optimization.
+
+### 2️⃣ **`Header.js` - Navigation Bar**
+- Uses **React Router** for navigation.
+- Displays user login status and online status.
+
+### 3️⃣ **`Body.js` - Main Content**
+- Fetches restaurant data from `API_URL_RESCARD`.
+- Implements **search and filtering**.
+- Uses a **Shimmer effect** while loading data.
+
+### 4️⃣ **`RestaurantCard.js` - Restaurant Display**
+- Dynamically loads restaurant details.
+- Uses `cloudinaryImageId` for optimized image loading.
+
+### 5️⃣ **`Cart.js` - Shopping Cart**
+- Retrieves cart data from **Redux store**.
+- Allows users to **clear the cart** with confirmation.
+
+## Technologies Used
+- **React 19** - Frontend framework
+- **Redux Toolkit** - State management
+- **React Router 7** - Navigation & Routing
+- **Parcel** - Bundler for fast builds
+- **Jest & React Testing Library** - Unit testing
+
+## Deployment
+To build the project for production, run:
 ```sh
 npm run build
 ```
-Then deploy the `dist/` folder to **GitHub Pages, Vercel, or Netlify**.
+This generates an optimized `dist/` folder for deployment.
 
-## 🤝 Contribution  
+## Contributing
+Feel free to **fork** this repository and submit a **pull request** for improvements!
 
-Contributions are welcome! Feel free to fork the repo, report issues, or submit pull requests.
-
-## 📜 License  
-
-This project is licensed under the **MIT License**.
+## Contact
+📧 Email: work.rajithlingam@gmail.com  
+🔗 LinkedIn: [Rajithlingam](https://www.linkedin.com/in/rajithlingam)  
+🐙 GitHub: [Rajithlingam](https://github.com/rajithlingam)
 
 ---
+Happy Coding! 🚀
 
-### 🔗 Connect with Me  
-- **LinkedIn**: [rajithlingam](https://www.linkedin.com/in/rajithlingam)  
-- **GitHub**: [rajithlingam](https://github.com/rajithlingam)
