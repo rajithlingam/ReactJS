@@ -1,9 +1,29 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { netflix_login_bg_img } from "../utils/url";
 import Header from "./Header";
+import { checkValidData } from "../utils/validate";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const name = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
+
+  const handleButtonClick = () => {
+    const message = checkValidData(
+      !isSignIn && (name.current.value),
+      email.current.value,
+      password.current.value
+    );
+    setErrorMessage(message);
+
+    console.log(!isSignIn &&(name.current.value));
+    console.log(email.current.value);
+    console.log(password.current.value);
+    console.log(message);
+  };
 
   const logStatus = () => {
     setIsSignIn(!isSignIn);
@@ -23,32 +43,46 @@ const Login = () => {
       </div>
 
       <div className="flex items-center justify-center min-h-screen">
-        <form className="w-105 p-10 bg-black opacity-80 text-white rounded-md">
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="w-105 p-10 bg-black opacity-80 text-white rounded-md"
+        >
           <h1 className="text-3xl font-semibold mb-4">
             {isSignIn ? "Sign In" : "Sign Up"}
           </h1>
 
           <div className="flex flex-col space-y-4">
-           {!isSignIn &&<input
-              type="name"
-              placeholder="Name"
-              className="w-full p-3 border border-gray-500 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
-            />}
+            {!isSignIn && (
+              <input
+                ref={name}
+                type="name"
+                placeholder="Name"
+                className="w-full p-3 border border-gray-500 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              />
+            )}
+
             <input
+              ref={email}
               type="email"
               placeholder="Email"
               className="w-full p-3 border border-gray-500 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
+
             <input
+              ref={password}
               type="password"
               placeholder="Password"
               className="w-full p-3 border border-gray-500 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
 
-          <button className="w-full mt-6 px-3 py-3 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-md font-semibold">
+          <button
+            onClick={handleButtonClick}
+            className="w-full mt-6 px-3 py-3 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-md font-semibold"
+          >
             {isSignIn ? "Sign In" : "Sign Up"}
           </button>
+          <p className="text-red-700 font-bold my-9">{errorMessage}</p>
           <p onClick={logStatus} className="mt-9 cursor-pointer">
             {isSignIn
               ? "New to Netflix? Sign up now."
