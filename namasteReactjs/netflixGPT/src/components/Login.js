@@ -2,7 +2,11 @@ import { useRef, useState } from "react";
 import { netflix_login_bg_img } from "../utils/url";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
-
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -13,16 +17,52 @@ const Login = () => {
 
   const handleButtonClick = () => {
     const message = checkValidData(
-      !isSignIn && (name.current.value),
+      !isSignIn && name.current.value,
       email.current.value,
       password.current.value
     );
     setErrorMessage(message);
 
-    console.log(!isSignIn &&(name.current.value));
-    console.log(email.current.value);
-    console.log(password.current.value);
-    console.log(message);
+    // console.log(!isSignIn &&(name.current.value));
+    // console.log(email.current.value);
+    // console.log(password.current.value);
+    // console.log(message);
+    if (message) return;
+    if (!isSignIn) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode + "-" + errorMessage);
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    } else {
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // console.log(errorCode + "-" + errorMessage);
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    }
   };
 
   const logStatus = () => {
