@@ -2,12 +2,12 @@ import { useRef, useState } from "react";
 import { netflix_login_bg_img } from "../utils/url";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword,} from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router";
 const Login = () => {
+  const navigate = useNavigate();
+  
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -37,7 +37,8 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
+          // console.log( user );
+        navigate( "/browse" );
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -54,7 +55,9 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
+          // console.log( user );
+        navigate( "/browse" );
+          
         })
         .catch((error) => {
           const errorCode = error.code;
