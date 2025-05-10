@@ -19,7 +19,6 @@ import Legal from "./components/Legal";
 import Shimmer from "./components/Shimmer";
 import appStore from "./utils/appStore";
 
-//import RestaurantMenu from "./components/RestaurantMenu";
 const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));
 
 const Applayout = () => {
