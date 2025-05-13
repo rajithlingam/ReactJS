@@ -58,7 +58,7 @@ ensuring <span className="text-white">smooth user experiences</span> through <sp
       default:
         return (
           <div className="text-gray-700 text-xl text-center max-w-md">
-            <p>👈 Tap a section on the left to explore my profile!</p>
+            <p>Tap any Button on the Screen to explore my profile!</p>
           </div>
         );
     }
