@@ -1,5 +1,3 @@
-
-
 const Account = () => {
   return (
     <div className="account-container">

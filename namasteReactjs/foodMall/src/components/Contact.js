@@ -17,9 +17,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // Handle form submission (e.g., send data to an API)
     console.log("Form Data Submitted:", formData);
     alert("Thank you for contacting us! We'll get back to you soon.");
+
     // Clear the form
     setFormData({
       name: "",

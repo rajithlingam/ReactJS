@@ -34,7 +34,9 @@ const Header = () => {
         <div className="nav-item">
           <ul>
             <li>
-              <button className="nav-button">Online Status: {onlineStatus ? "💚" : "⛔"}</button>
+              <button className="nav-button">
+                Online Status: {onlineStatus ? "💚" : "⛔"}
+              </button>
             </li>
 
             <li>
@@ -45,7 +47,9 @@ const Header = () => {
 
             <li>
               <Link to="/Cart">
-                <button className="nav-button">Cart ({showSelector.length})</button>
+                <button className="nav-button">
+                  Cart ({showSelector.length})
+                </button>
               </Link>
             </li>
 
@@ -62,7 +66,9 @@ const Header = () => {
             </li>
 
             <li>
-              <button className="nav-button" onClick={handleLogin}>{Log}</button>
+              <button className="nav-button" onClick={handleLogin}>
+                {Log}
+              </button>
             </li>
 
             <li>

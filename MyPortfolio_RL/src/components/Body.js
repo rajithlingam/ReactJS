@@ -8,12 +8,32 @@ const Body = () => {
       case "about":
         return (
           <div className="space-y-4 max-w-xl  text-lg sm:text-xl">
-            <h2 className="text-3xl font-semibold text-white drop-shadow">👋 About Me</h2>
+            <h2 className="text-3xl font-semibold text-white drop-shadow">
+              👋 About Me
+            </h2>
             <p>
-              I'm <strong className="text-white drop-shadow">RAJITHLINGAM</strong>, a <span className="font-extrabold text-2xl text-white">Full Stack Developer</span> with expertise in building feature-rich, scalable, and high-performance web
-applications. Proficient in <span className="text-white">React.js,Tailwind CSS, and Parcel,</span> with a strong understanding of <span className="text-white">front-end testing
-practices and API integrations.</span> Adept at problem-solving, implementing modern development workflows, and
-ensuring <span className="text-white">smooth user experiences</span> through <span className="text-white">responsive and maintainable designs.</span>
+              I'm{" "}
+              <strong className="text-white drop-shadow">RAJITHLINGAM</strong>,
+              a{" "}
+              <span className="font-extrabold text-2xl text-white">
+                Full Stack Developer
+              </span>{" "}
+              with expertise in building feature-rich, scalable, and
+              high-performance web applications. Proficient in{" "}
+              <span className="text-white">
+                React.js,Tailwind CSS, and Parcel,
+              </span>{" "}
+              with a strong understanding of{" "}
+              <span className="text-white">
+                front-end testing practices and API integrations.
+              </span>{" "}
+              Adept at problem-solving, implementing modern development
+              workflows, and ensuring{" "}
+              <span className="text-white">smooth user experiences</span>{" "}
+              through{" "}
+              <span className="text-white">
+                responsive and maintainable designs.
+              </span>
             </p>
           </div>
         );
@@ -36,11 +56,15 @@ ensuring <span className="text-white">smooth user experiences</span> through <sp
             <h2 className="text-3xl font-semibold text-white">🚀 Projects</h2>
             <div>
               <h3 className="font-bold">NetflixGPT</h3>
-              <p className="text-violet-50">Movie recommender using OpenAI API, React, Redux, Firebase.</p>
+              <p className="text-violet-50">
+                Movie recommender using OpenAI API, React, Redux, Firebase.
+              </p>
             </div>
             <div>
               <h3 className="font-bold">FoodMall</h3>
-              <p className="text-violet-50">Food ordering UI with filters, dynamic routing, and hooks.</p>
+              <p className="text-violet-50">
+                Food ordering UI with filters, dynamic routing, and hooks.
+              </p>
             </div>
           </div>
         );
@@ -49,9 +73,18 @@ ensuring <span className="text-white">smooth user experiences</span> through <sp
         return (
           <div className="space-y-4 max-w-xl text-lg sm:text-xl">
             <h2 className="text-3xl font-semibold text-white">🧠 Skills</h2>
-            <p className="text-violet-50"><strong className="text-black">Frontend:</strong> HTML, CSS, JavaScript, React, TailwindCSS</p>
-            <p className="text-violet-50"><strong className="text-black">Tools:</strong> Firebase, Git, Parcel</p>
-            <p className="text-violet-50"><strong className="text-black">Testing:</strong> Jest, React Testing Library</p>
+            <p className="text-violet-50">
+              <strong className="text-black">Frontend:</strong> HTML, CSS,
+              JavaScript, React, TailwindCSS
+            </p>
+            <p className="text-violet-50">
+              <strong className="text-black">Tools:</strong> Firebase, Git,
+              Parcel
+            </p>
+            <p className="text-violet-50">
+              <strong className="text-black">Testing:</strong> Jest, React
+              Testing Library
+            </p>
           </div>
         );
 

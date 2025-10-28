@@ -1,4 +1,3 @@
-
 const Legal = () => {
   return (
     <div className="legal-container">

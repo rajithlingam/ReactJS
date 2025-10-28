@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="footer-logo-container">
         <img
           className="footer-logo"
-          src="https://tse2.mm.bing.net/th?id=OIG4.n2dyP_ydktvxnkqr1adX&pid=ImgGn"
+          src="https://raw.githubusercontent.com/rajithlingam/ReactJS/refs/heads/main/namasteReactjs/foodMall/asstes/FoodMaLL_logo.png"
           alt="foodmall logo"
         />
       </div>

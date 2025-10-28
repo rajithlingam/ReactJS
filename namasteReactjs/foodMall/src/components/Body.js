@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import {API_URL_RESCARD}from "../utils/url"
+import { API_URL_RESCARD } from "../utils/url";
 import RestaurantCard, { withPromotedResCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import {Link} from "react-router"
+import { Link } from "react-router";
 
 const Body = () => {
   const [resCardFilter, setResCardFilter] = useState([]);
@@ -15,16 +15,18 @@ const Body = () => {
   console.log("resCardFilter");
 
   const fetchObjList = async () => {
-    const API_objLink = await fetch(API_URL_RESCARD); 
+    const API_objLink = await fetch(API_URL_RESCARD);
 
     const jsonCardData = await API_objLink.json();
     console.log("jsonCardData");
     console.log(jsonCardData);
     setResCardFilter(
-      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
     setFilteredSearch(
-      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsonCardData?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
   };
 
@@ -57,7 +59,6 @@ const Body = () => {
                   );
                   console.log("searchcard");
                   console.log(searchCard);
-
                   setFilteredSearch(searchCard);
                 })
               }
@@ -80,7 +81,8 @@ const Body = () => {
 
       <div className="res-container">
         {FilteredSearch.map((mapResArgument) => (
-          <Link className="Rescard-Link"
+          <Link
+            className="Rescard-Link"
             key={mapResArgument?.info?.id}
             to={"/RestaurantMenu/" + mapResArgument?.info?.id}
           >
